@@ -1,1 +1,4 @@
 hermes_python==0.*
+
+requests
+json
