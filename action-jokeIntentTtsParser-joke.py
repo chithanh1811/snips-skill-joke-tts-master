@@ -14,7 +14,7 @@ MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 with open('jokes.json') as json_file:
     jokes = json.load(json_file)
 
-index = print(random.randint(0, jokes["count"] - 1))    
+index = random.randint(0, jokes["count"] - 1)    
 print(index)    
 joke = jokes["jokes"][index]
 
