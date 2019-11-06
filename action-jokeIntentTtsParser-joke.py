@@ -9,7 +9,7 @@ MQTT_IP_ADDR = "localhost"
 MQTT_PORT = 1883
 MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 
-joke = requests.get("https://sv443.net/jokeapi/category/Any").json()
+joke = requests.get("https://sv443.net/jokeapi/category/any?blacklistFlags=nsfwreligiouspolitical").json()
 
 
 def intent_received(hermes, intent_message):
