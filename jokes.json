@@ -1,7 +1,6 @@
 {
 	"count": 20
-	"jokes": 
-	[
+	"jokes": [
 		{
 			"category": "Programming",
 			"type": "single",
