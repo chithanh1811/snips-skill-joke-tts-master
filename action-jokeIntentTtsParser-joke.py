@@ -14,12 +14,11 @@ MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 with open('jokes.json') as json_file:
     jokes = json.load(json_file)
 
-index = random.randint(0, jokes["count"] - 1)    
-print(index)    
-joke = jokes["jokes"][index]
-
 
 def intent_received(hermes, intent_message):
+    index = random.randint(0, jokes["count"] - 1)    
+    print(index)    
+    joke = jokes["jokes"][index]
     if joke["type"] == "single":
         sentence = joke["joke"]
     else:
