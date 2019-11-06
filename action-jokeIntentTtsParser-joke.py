@@ -12,7 +12,8 @@ MQTT_PORT = 1883
 MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 
 with open('jokes.json') as json_file:
-    joke = json.load(json_file)["jokes"][random.randint(0, joke["count"])]
+    jokes = json.load(json_file)
+    joke = jokes["jokes"][random.randint(0, jokes["count"])]
 
 def intent_received(hermes, intent_message):
     if joke["type"] == "single":
